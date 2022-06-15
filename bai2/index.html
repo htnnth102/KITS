@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơ yếu lý lịch</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="container" id="header">
+        <div class="img">
+            <h1>ẢNH</h1>
+            <h4>4x6</h4>
+            <p>Đóng dấu giáp lai của nơi xác nhận hồ sơ</p>
+        </div>
+        <div class="text">
+            <div class="text-1">
+                <h2>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</h2>
+                <h3>Độc lập - Tự do - Hạnh Phúc</h3>
+                <p>____________________________</p>
+            </div>
+            <div class="text-2">
+                <h1>SƠ YẾU LÝ LỊCH</h1>
+                <h2>TỰ THUẬT</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-info">
+        <h3>THÔNG TIN CÁ NHÂN</h3><br>
+        <ul>
+            <li class="li_flex" style="width: 900px">
+                <div class="field">
+                    <label for="name">1. Họ và tên</label>
+                    <input type="text" placeholder=".................................................." id="name">
+                </div>
+                <div class="field">
+                    <label for="gender">Nam/ Nữ</label>
+                    <input type="text" placeholder=".................................................." id="gender">
+                </div>
+            </li>
+            <li class="li_flex">
+                <div class="field">
+                    <label for="date">2. Sinh ngày</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 10%;" id="date">
+                </div>
+                <div class="field">
+                    <label for="month">Tháng</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 10%;" id="month">
+                </div>
+                <div class="field">
+                    <label for="year">Năm</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 10%;" id="year">
+                </div>
+                <div class="field">
+                    <label for="place">Nơi sinh</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 10%;" id="place">
+                </div>
+
+            </li>
+            <li>
+                <div class="field">
+                    <label for="org_place">3. Nguyên quán</label>
+                    <input type="text" placeholder=".................................................." id="org_place">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="hktt">4. Nơi đăng ký hộ khẩu thường trú</label>
+                    <input type="text" placeholder=".................................................." id="hktt">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="now_place">5. Chỗ ở hiện nay</label>
+                    <input type="text" placeholder=".................................................." id="now_place">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="phone">6. Điện thoại liên hệ</label>
+                    <input type="text" placeholder=".................................................." id="phone">
+                </div>
+            </li>
+            <li class="li_flex">
+                <div class="field">
+                    <label for="ethnic">7. Dân tộc</label>
+                    <input type="text" placeholder=".................................................." id="ethnic">
+                </div>
+                <div class="field">
+                    <label for="religion">Tôn giáo</label>
+                    <input type="text" placeholder=".................................................." id="religion">
+                </div>
+            </li>
+            <li class="li_flex">
+                <div class="field">
+                    <label for="identity_no">8. Số chứng minh</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 50%" id="identity_no">
+                </div>
+                <div class="field">
+                    <label for="date2">Cấp ngày</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 5%" id="date2">
+                </div>
+                <div class="field">
+                    <label for="month2">/</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 5%" id="month2">
+                </div>
+                <div class="field">
+                    <label for="year2">/</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 5%" id="year2">
+                </div>
+                <div class="field">
+                    <label for="place2">Nơi cấp</label>
+                    <input type="text" placeholder=".................................................." id="place2">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="educate">9. Trình độ văn hóa</label>
+                    <input type="text" placeholder=".................................................." id="educate">
+                </div>
+            </li>
+            <li class="li_flex">
+                <div class="field">
+                    <label for="tncs">10. Kết nạp Đoàn TNCS HCM</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 40%" id="tncs">
+                </div>
+                <div class="field">
+                    <label for="slash1">/</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 5%" id="slash1">
+                </div>
+                <div class="field">
+                    <label for="slash2">/</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 5%" id="slash2">
+                </div>
+                <div class="field">
+                    <label for="at_place">Tại</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 45%" id="at_place">
+                </div>
+            </li>
+            <li class="li_flex">
+                <div class="field">
+                    <label for="tncs">11. Kết nạp Đảng CSVN</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 40%" id="tncs">
+                </div>
+                <div class="field">
+                    <label for="slash1">/</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 5%" id="slash1">
+                </div>
+                <div class="field">
+                    <label for="slash2">/</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 5%" id="slash2">
+                </div>
+                <div class="field">
+                    <label for="at_place">Tại</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 45%" id="at_place">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="achieve">12. Khen thưởng/ Kỷ luật</label>
+                    <input type="text" placeholder=".................................................." id="achieve">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="strength">13. Sỏ trường</label>
+                    <input type="text" placeholder=".................................................." id="streng">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container-info">
+        <h3>QUAN HỆ GIA ĐÌNH</h3><br>
+        <ul>
+            <li class="li_flex" style="width: 900px">
+                <div class="field">
+                    <label for="name" style="font-weight: bold">1. Họ và tên cha</label>
+                    <input type="text" placeholder=".................................................." id="name">
+                </div>
+                <div class="field">
+                    <label for="year_dad">Năm sinh:</label>
+                    <input type="text" placeholder=".................................................." id="year_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="job_dad">- Nghề nghiệp hiện nay</label>
+                    <input type="text" placeholder=".................................................." id="job_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="workplace_dad">- Cơ quan công tác</label>
+                    <input type="text" placeholder=".................................................."
+                        id="workplace_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="place_dad">- Chỗ ở hiện tại</label>
+                    <input type="text" placeholder=".................................................." id="place_dad">
+                </div>
+            </li>
+        </ul>
+
+
+        <ul>
+            <li class="li_flex" style="width: 900px">
+                <div class="field">
+                    <label for="name" style="font-weight: bold">1. Họ và tên cha</label>
+                    <input type="text" placeholder=".................................................." id="name">
+                </div>
+                <div class="field">
+                    <label for="year_dad">Năm sinh:</label>
+                    <input type="text" placeholder=".................................................." id="year_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="job_dad">- Nghề nghiệp hiện nay</label>
+                    <input type="text" placeholder=".................................................." id="job_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="workplace_dad">- Cơ quan công tác</label>
+                    <input type="text" placeholder=".................................................."
+                        id="workplace_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="place_dad">- Chỗ ở hiện tại</label>
+                    <input type="text" placeholder=".................................................." id="place_dad">
+                </div>
+            </li>
+        </ul>
+
+        <ul>
+            <li class="li_flex" style="width: 900px">
+                <div class="field">
+                    <label for="name" style="font-weight: bold">1. Họ và tên cha</label>
+                    <input type="text" placeholder=".................................................." id="name">
+                </div>
+                <div class="field">
+                    <label for="year_dad">Năm sinh:</label>
+                    <input type="text" placeholder=".................................................." id="year_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="job_dad">- Nghề nghiệp hiện nay</label>
+                    <input type="text" placeholder=".................................................." id="job_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="workplace_dad">- Cơ quan công tác</label>
+                    <input type="text" placeholder=".................................................."
+                        id="workplace_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="place_dad">- Chỗ ở hiện tại</label>
+                    <input type="text" placeholder=".................................................." id="place_dad">
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li class="li_flex" style="width: 900px">
+                <div class="field">
+                    <label for="name" style="font-weight: bold">1. Họ và tên cha</label>
+                    <input type="text" placeholder=".................................................." id="name">
+                </div>
+                <div class="field">
+                    <label for="year_dad">Năm sinh:</label>
+                    <input type="text" placeholder=".................................................." id="year_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="job_dad">- Nghề nghiệp hiện nay</label>
+                    <input type="text" placeholder=".................................................." id="job_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="workplace_dad">- Cơ quan công tác</label>
+                    <input type="text" placeholder=".................................................."
+                        id="workplace_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="place_dad">- Chỗ ở hiện tại</label>
+                    <input type="text" placeholder=".................................................." id="place_dad">
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li class="li_flex" style="width: 900px">
+                <div class="field">
+                    <label for="name" style="font-weight: bold">1. Họ và tên cha</label>
+                    <input type="text" placeholder=".................................................." id="name">
+                </div>
+                <div class="field">
+                    <label for="year_dad">Năm sinh:</label>
+                    <input type="text" placeholder=".................................................." id="year_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="job_dad">- Nghề nghiệp hiện nay</label>
+                    <input type="text" placeholder=".................................................." id="job_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="workplace_dad">- Cơ quan công tác</label>
+                    <input type="text" placeholder=".................................................."
+                        id="workplace_dad">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                    <label for="place_dad">- Chỗ ở hiện tại</label>
+                    <input type="text" placeholder=".................................................." id="place_dad">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container-info">
+        <h3>III. TÓM TẮT QUÁ TRÌNH ĐÀO TẠO</h3>
+        <table>
+            <tr>
+                <th width="10%">Từ tháng năm đến tháng năm</th>
+                <th width="30%">Tên trường/ cơ sở đào tạo</th>
+                <th width="20%">Ngành học </th>
+                <th width="30%">Hình thức đào tạo</th>
+                <th width="10%">Văn bằng chứng chỉ</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div class="container-info">
+        <h3>III. TÓM TẮT QUÁ TRÌNH ĐÀO TẠO</h3>
+        <table>
+            <tr>
+                <th width="20%">Từ tháng năm đến tháng năm</th>
+                <th width="55%">Đơn vị công tác</th>
+                <th width="25%">Chức vụ</th>
+            </tr>
+        </table>
+        <p>
+            Tôi xin cam đoan bản khai sơ yếu lý lịch trên đúng sự thật, nếu có điều gì không đúng tôi chịu trách nhiệm
+            trước pháp luật về lời khai của mình.
+        </p>
+    </div>
+    <div class="container">
+        <div class="box">
+            <p style="font-weight: bold;">Xác nhận của cơ quan đang công tác hoặc địa phương nơi đang đăng ký hộ khẩu
+            </p>
+        </div>
+
+        <div class="box">
+            <div class="li_flex">
+                <div class="field">
+                    <label for="city">Thành phố</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 40%" id="city">
+                </div>
+                <div class="field">
+                    <label for="date3">Ngày</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 15%" id="date3">
+                </div>
+                <div class="field">
+                    <label for="month3">tháng</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 15%" id="month3">
+                </div>
+                <div class="field">
+                    <label for="year20">Năm 20</label>
+                    <input type="text" placeholder=".................................................."
+                        style="width: 30%" id="year20">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
