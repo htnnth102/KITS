@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#myForm').validate({
+				rules: {
+					fullname: {
+						required: true,
+						maxlength: 30,
+						minlength: 5,
+					},
+					DateOfBirth: {
+						required: true,
+					},
+					password: {
+						minlength: 10,
+					},
+					income: {
+						range: [10000000, 1000000000],
+					},
+					email: {
+						required: true,
+						email: true,
+					},
+					facebook: {
+						required: true,
+						url: true,
+					},
+					phone: {
+						required: true,
+						digits: true,
+						minlength: 10,
+					},
+					confirm_password: {
+						equalTo: '#pass',
+					}
+					,
+					hometown: {
+						required: true,
+					},
+					className: {
+						required: true,
+					},
+					image: {
+						required: true,
+					},
+					gender: {
+						required: true,
+					},
+					"hobby[]": {
+						required: true,
+						minlength: 2,
+					}
+
+				},
+				messages: {
+					fullname: {
+						required: "Không được bỏ trống họ tên" + "<br>",
+						maxlength: "Họ tên không được dài quá 30 ký tự",
+						minlength: "Họ tên không được ngắn hơn 5 ký tự",
+					},
+					DateOfBirth: {
+						required: "Vui lòng chọn ngày sinh",
+					},
+					password: {
+						minlength: "Mật khẩu quá ngắn",
+					},
+					income: {
+						range: "Thu nhập không hợp lý",
+					},
+					email: {
+						required: "Vui lòng nhập email",
+						email: "Email sai",
+					},
+					facebook: {
+						required: "Vui lòng nhập thông tin facebook",
+						url: "Không đúng định dạng url",
+
+					},
+					phone: {
+						required: "Vui lòng nhập số điện thoại của bạn",
+						digits: "Số điện thoại chỉ bao gồm số 0-9",
+						minlength: "Số điện thoại không hợp lệ",
+					},
+					confirm_password: {
+						equalTo: "Mật khẩu không khớp",
+					},
+					hometown: {
+						required: "Vui lòng chọn quê quán",
+					},
+					className: {
+						required: "Vui lòng chọn lớp",
+					},
+					image: {
+						required: "Vui lòng chọn ảnh",
+					},
+					gender: {
+						required: "Vui lòng chọn giới tính của bạn",
+					},
+					"hobby[]": {
+						required: "Chọn sở thích",
+						minlength: "Cần chọn 2 sở thích",
+					}
+				}
+			});
+			// var rs;
+			// $('.error').each(function () {
+			// 	rs = $(this).val();
+			// 	console.log(rs);
+			// });
+
+		});
+	</script>
+	<style>
+		label.error {
+			color: red;
+
+		}
+
+		table {
+			margin-top: 200px;
+		}
+	</style>
+	<title>Form Demo</title>
+</head>
+
+<body>
+	<div id="rs">
+
+	</div>
+	<form action="student.php" method="POST" id="myForm">
+		<label for="fullname"></label>
+		<label for="dob"></label>
+
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><label for=""><input type="text" name="fullname" id="fullname" value=""></label></td>
+			</tr>
+			<tr>
+				<td>DOB</td>
+				<td><input type="date" name="DateOfBirth" value="" id="dob"></td>
+			</tr>
+			<tr>
+				<td>Sex</td>
+				<td><input type="radio" name="gender" value="0">Nam
+					<input type="radio" name="gender" value="1">Nu
+				</td>
+			</tr>
+			<tr>
+				<td>Income</td>
+				<td><input type="number" name="income" value="">
+				</td>
+			</tr>
+			<tr>
+				<td>Phone</td>
+				<td><input type="text" name="phone" value="">
+				</td>
+			</tr>
+			<tr>
+				<td>Born in</td>
+				<td><select name="hometown">
+						<option value="">Chọn quê quán</option>
+						<option value="1">An Giang</option>
+						<option value="2">Bạc Liêu</option>
+						<option value="3">Bắc Cạn</option>
+						<option value="4">Bắc Giang</option>
+						<option value="5">Bắc Ninh</option>
+						<option value="6">Bến Tre</option>
+						<option value="7">Bình Dương</option>
+						<option value="8">Bình Định</option>
+						<option value="9">Bình Phước</option>
+						<option value="10">Bình Thuận</option>
+						<option value="11">Cà Mau</option>
+						<option value="12">Cao Bằng</option>
+						<option value="13">Cần Thơ</option>
+						<option value="14">Đà Nẵng</option>
+						<option value="15">Daklak</option>
+						<option value="16">Đồng Nai</option>
+						<option value="17">Đồng Tháp</option>
+						<option value="18">Gia Lai</option>
+						<option value="19">Hà Giang</option>
+						<option value="20">Hà Nam</option>
+						<option value="21">Hà Nội</option>
+						<option value="22">Hà Tĩnh</option>
+						<option value="23">Hải Dương</option>
+						<option value="24">Hải Phòng</option>
+						<option value="25">Hòa Bình</option>
+						<option value="26">Hồ Chí Minh</option>
+						<option value="27">Hưng Yên</option>
+						<option value="28">Khánh Hòa</option>
+						<option value="29">Kiên Giang</option>
+						<option value="30">Kon Tum</option>
+						<option value="31">Lai Châu</option>
+						<option value="32">Lạng Sơn</option>
+						<option value="33">Lào Cai</option>
+						<option value="34">Lâm Đồng</option>
+						<option value="35">Long An</option>
+						<option value="36">Nam Định</option>
+						<option value="37">Nghệ An</option>
+						<option value="38">Ninh Bình</option>
+						<option value="39">Ninh Thuận</option>
+						<option value="40">Phú Thọ</option>
+						<option value="41">Phú Yên</option>
+						<option value="42">Quảng Bình</option>
+						<option value="43">Quảng Nam</option>
+						<option value="44">Quảng Ngãi</option>
+						<option value="45">Quảng Ninh</option>
+						<option value="46">Sóc Trăng</option>
+						<option value="47">Sơn La</option>
+						<option value="48">Tây Ninh</option>
+						<option value="49">Thái Bình</option>
+						<option value="50">Thái Nguyên</option>
+						<option value="51">Thanh Hóa</option>
+						<option value="52">Thừa Thiên Huế</option>
+						<option value="53">Tiền Giang</option>
+						<option value="54">Trà Vinh</option>
+						<option value="55">Tuyên Quang</option>
+						<option value="56">Vĩnh Long</option>
+						<option value="57">Vĩnh Phúc</option>
+						<option value="58">Yên Bái</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td><input type="text" value=""></td>
+			</tr>
+			<tr>
+				<td>Hobbies</td>
+				<td><input type="checkbox" name="hobby[]" value="1">The thao
+					<input type="checkbox" name="hobby[]" value="2">Du lich
+					<input type="checkbox" name="hobby[]" value="4">Phim anh
+					<input type="checkbox" name="hobby[]" value="8">Am thuc
+				</td>
+			</tr>
+			<tr>
+				<td>Color fav</td>
+				<td><input type="color" name="color" value="#ED2CDD"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" name="email" value=""></td>
+			</tr>
+			<tr>
+				<td>Facebook</td>
+				<td><input type="text" name="facebook" value=""></td>
+			</tr>
+			<tr>
+				<td>Class</td>
+				<td><select name="className">
+						<option value="">Chọn lớp</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+
+					</select></td>
+			</tr>
+			<tr>
+				<td>Login name</td>
+				<td><input type="text" name="login"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password" id="pass"></td>
+			</tr>
+			<tr>
+				<td>Confirm password</td>
+				<td><input type="password" name="confirm_password"></td>
+			</tr>
+			<tr>
+				<td>Image</td>
+				<td><input type="file" name="image"></td>
+			</tr>
+			<tr>
+				<td>Description</td>
+				<td><textarea placeholder="nhap vao day"></textarea></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Send"></td>
+				<td><input type="reset" value="Resubmit"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+
+</html>
